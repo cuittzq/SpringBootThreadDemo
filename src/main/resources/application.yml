@@ -1,0 +1,8 @@
+server:
+  port: 8078
+spring:
+  task:
+    core_pool_size: 5
+    max_pool_size: 50
+    queue_capacity: 1000
+    keep_alive_seconds: 60
