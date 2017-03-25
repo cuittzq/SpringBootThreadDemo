@@ -16,7 +16,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Application {
     public static void main(String[] args) {
         // 程序启动入口
-
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(TaskExecutorConfig.class);
         ThreadTsetone(ctx);
         ThreadTsettwo(ctx);
