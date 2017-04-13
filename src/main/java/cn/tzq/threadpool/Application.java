@@ -17,8 +17,8 @@ public class Application {
     public static void main(String[] args) {
         // 程序启动入口
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(TaskExecutorConfig.class);
-        ThreadTsetone(ctx);
-        ThreadTsettwo(ctx);
+        // ThreadTsetone(ctx);
+        ThreadTsetthree(ctx);
     }
 
     public static void ThreadTsetone(ConfigurableApplicationContext ctx) {
@@ -51,5 +51,10 @@ public class Application {
             asyncTaskService.executeAsyncTask(i);
             asyncTaskService.executeAsyncTaskPlus(i);
         }
+    }
+
+    public static void ThreadTsetthree(ConfigurableApplicationContext ctx) {
+        ThreadPoolTaskExecutorTest asyncTaskService = ctx.getBean(ThreadPoolTaskExecutorTest.class);
+        asyncTaskService.ThreadTsettwo();
     }
 }
